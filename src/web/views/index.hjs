@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ title }}</title>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+
+<script type="text/javascript">
+	// Downloads the profile to the roast application.
+	function download() {
+		xmlhttp = new XMLHttpRequest();
+		xmlhttp.open("GET", "/download", true);
+		//xmlhttp.send("finishTemp=100");
+		xmlhttp.send();
+		document.getElementById("response").innerHTML = xmlhttp.responseText;
+		showStatus("Profile downloaded")
+	}
+
+	function preheat() {
+		showStatus("Preheat started")
+	}
+
+	function start() {
+		showStatus("Roast started")
+	}
+
+	function stop() {
+		showStatus("Roast stopped")
+	}
+
+	function showStatus(status) {
+		document.getElementById("status").innerHTML = status;
+		setTimeout(function() {
+			clearStatus()
+		}, 3000);
+	}
+
+	// Clears the status label.
+	function clearStatus() {
+		document.getElementById("status").innerHTML = "";
+	}
+</script>
+
+
+</head>
+<body>
+	<h1>House Roast</h1>
+	<p>Configure your roast profile here:</p>
+	<table>
+		<tr style="">
+			<td>Pre-heat Temp (F)</td>
+			<td><input type="number" name="preheat" min="200" max="350"
+				step="10" value="300"></td>
+		</tr>
+		<tr>
+			<td>First Crack Power (%)</td>
+			<td><input type="number" name="firstCrackPower" min="10"
+				max="100" step="1" value="75"></td>
+		</tr>
+		<tr>
+			<td>First Crack Temp (F)</td>
+			<td><input type="number" name="firstCrackTemp" min="200"
+				max="450" step="10" value="390"></td>
+		</tr>
+		<tr>
+			<td>Finish Power (%)</td>
+			<td><input type="number" name="finishPower" min="10" max="100"
+				step="1" value="50"></td>
+		</tr>
+		<tr>
+			<td>Finish Temp (F)</td>
+			<td><input id="finishTemp" type="number" name="finishTemp"
+				min="200" max="450" step="10" value="430"></td>
+		</tr>
+		<tr>
+			<td>
+				<button type="button" onclick="download()">Download</button>
+				<button type="button" onclick="preheat()">Preheat</button>
+				<button type="button" onclick="start()">Start</button>
+				<button type="button" onclick="stop()">Stop</button>
+			</td>
+		</tr>
+	</table>
+	<div id="status"></div>
+	<div id="response"></div>
+
+</body>
+</html>
