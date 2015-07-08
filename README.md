@@ -14,3 +14,19 @@ The House Roast is a device that will convert your GE convection oven into a cof
 * Once cool, remove the chaff using the chaff removal box
 * Grind, brew and enjoy!
 
+## Roast profiles
+Roast profiles are broken up into 3 general phases:
+* Pre-heat phase - Bring the oven up to the desired starting temperature to quickly dry out the beans at the start of the roast.
+* First-Crack phase - Continue drying out the beans and raise the temperature at the desired rate.  Ideally, beans will begin cracking at the end of this phase.
+* Finish Phase - Finish the beans for optimal flavor.  This phase typically increases temperature at a slower rate than the previous phase and will normally stop before reaching "Second Crack".
+
+This image shows the phases of a basic roast profile:
+![](https://github.com/rdsuel/house-roast/blob/master/docs/Roast_Plot.png)
+
+This image shows the properties of a basic roast profile:
+![](https://github.com/rdsuel/house-roast/blob/master/docs/Roast_Params.png)
+
+And finally, this image shows how a profile might be configured using a web browser or app:
+![](https://github.com/rdsuel/house-roast/blob/master/docs/Roast_Config.png)
+
+## App Requirements
