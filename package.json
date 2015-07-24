@@ -1,0 +1,49 @@
+{
+  "name": "house-roast",
+  "version": "1.0.0",
+  "description": "Home coffee roaster controller",
+  "main": "/src/index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "dependencies": {
+    "express": "^4.13.1",
+    "green-bean": "^0.1.1",
+    "pi-spi": "^1.0.0"
+  },
+  "devDependencies": {
+    "blanket": "^1.1.7",
+    "chai": "^3.2.0",
+    "mocha": "^2.2.5",
+    "should": "^7.0.2",
+    "sinon": "^1.15.4",
+    "sinon-chai": "^2.8.0"
+  },
+  "scripts": {
+    "test": "mocha && mocha test --require blanket --reporter html-cov > coverage.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdsuel/house-roast.git"
+  },
+  "keywords": [
+    "house",
+    "roast"
+  ],
+  "author": "Rick Suel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rdsuel/house-roast/issues"
+  },
+  "homepage": "https://github.com/rdsuel/house-roast#readme",
+  "config": {
+    "blanket": {
+      "pattern": [
+        "/src/index.js",
+        "/src/roaster.js"
+      ],
+      "data-cover-never": "node_modules"
+    }
+  }
+}
