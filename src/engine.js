@@ -1,6 +1,7 @@
 var oven = require('./oven.js');
 var greenBean = require('green-bean');
 var tempSensor = require('./tempSensor.js')
+//var tempSensor = require('./tempSensor_Fake.js')
 var gbRange = {};
 var roastPhase1 = {
 	power: 75,
